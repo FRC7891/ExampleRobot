@@ -1,6 +1,8 @@
 
 package frc.robot;
 import com.studiohartman.jamepad.ControllerManager;
+
+
 import edu.wpi.first.wpilibj.XboxController;
 
 public class OI {
@@ -8,11 +10,12 @@ public class OI {
   private static ControllerManager controller = new ControllerManager();
   public double GetDriverRawAxis(int axis){
     return driverController.getRawAxis(axis);
-    
-    
+
   }
- 
+  
+
   public OI(){
     controller.initSDLGamepad();
   }
 }
+
