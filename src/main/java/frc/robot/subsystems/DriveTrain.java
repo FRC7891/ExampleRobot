@@ -9,6 +9,8 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
 import frc.robot.commands.TankDrive;
@@ -19,10 +21,10 @@ import frc.robot.commands.TankDrive;
 public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
- private TalonSRX motorLeft1 = new TalonSRX(RobotMap.Motor_Left_1_ID);
- private TalonSRX motorLeft2 = new TalonSRX(RobotMap.Motor_Left_2_ID);
- private TalonSRX motorRight1 = new TalonSRX(RobotMap.Motor_Right_1_ID);
- private TalonSRX motorRight2 = new TalonSRX(RobotMap.Motor_Right_2_ID);
+  private TalonSRX motorLeft1 = new TalonSRX(RobotMap.Motor_Left_1_ID);
+  private VictorSPX motorLeft2 = new VictorSPX(RobotMap.Motor_Left_2_ID);
+  private TalonSRX motorRight1 = new TalonSRX(RobotMap.Motor_Right_1_ID);
+  private VictorSPX motorRight2 = new VictorSPX(RobotMap.Motor_Right_2_ID);
 
   @Override
   public void initDefaultCommand() {
